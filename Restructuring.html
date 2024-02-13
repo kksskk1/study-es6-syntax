@@ -1,0 +1,39 @@
+<script>
+    // 객체 
+    var test = {
+        a: 'kim',
+        b: 12,
+        ff: 'test',
+        c: 'run',
+    }
+    var {a, b, c, ff} = test;
+
+    console.log(a, b, c, ff);
+
+    // 배열
+    var test = ['a', 'b', 'c', 123];
+    var [a, b, c, d] = test;
+
+    console.log(a, b, c, d);
+
+    
+    var test = {
+        a: 'a',
+        b: 'b',
+        test: 'test',
+        number: 1,
+        number2: 2,
+    };
+    var testFunc = function({number, number2, a, b, test}) {
+        return a + b + test + (number + number2);
+    }
+    console.log(testFunc(test));
+
+
+    var test = [1, 2, 3];
+    var testFunc = function([a, b, c]) {
+        return a + b + c;
+    }
+    console.log(testFunc(test));
+
+</script>
