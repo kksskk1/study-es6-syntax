@@ -1,0 +1,23 @@
+<script>
+    var evens = [2, 4, 6, 8];
+
+    var odds = evens.map((v) => v + 1);
+    var nums = evens.map((v, i) => v + i);
+    var pairs = evens.map((v) => ({ evens: v, odd: v + 1 }));
+
+    console.log(odds);
+    console.log(nums);
+    console.log(pairs);
+
+    nums.forEach((v) => {
+        if(v % 5 == 0) console.log(v);
+    })
+
+    let test = (name) => {
+        setTimeout(() => {
+            console.log('setTimeout: ' + name); // A{}
+        }, 2000);
+        return console.log('this: ' + name); // A{}
+    }
+    test('my name');
+</script>
