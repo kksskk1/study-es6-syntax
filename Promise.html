@@ -1,0 +1,38 @@
+<script>
+    const promiseFunc = (msg) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if(msg == 'test1') {
+                    resolve('success');
+                } else {
+                    resolve('fail');
+                }
+            }, 1000);
+        });
+    };
+
+
+    const promiseFunc2 = (msg) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if(msg == 'test2') {
+                    resolve('success');
+                } else {
+                    resolve('fail');
+                }
+            }, 1000);
+        });
+    };
+
+    promiseFunc('test1').then((result) => {
+        console.log(result);
+    });
+
+    promiseFunc('test2').then((result) => {
+        console.log(result);
+    });
+
+    Promise.all([promiseFunc('test1'), promiseFunc2('test2')]).then((result) => {
+        console.log('모두 실행 완료', result);
+    });
+</script>
